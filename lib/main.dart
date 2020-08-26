@@ -1,6 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_start/page/StatelessWidgetPage.dart';
+import 'package:flutter_start/widget/PageRoute.dart';
 
 void main() {
   runApp(MyApp());
@@ -16,9 +17,7 @@ class MyApp extends StatelessWidget {
         primarySwatch: Colors.blue,
         visualDensity: VisualDensity.adaptivePlatformDensity,
       ),
-      routes: {
-        "statelesswidget" : (context) => StatelessWidgetPage()
-      },
+      routes: {"statelesswidget": (context) => StatelessWidgetPage()},
       home: MyHomePage(title: 'Flutter Demo Home Page'),
     );
   }
@@ -34,16 +33,9 @@ class MyHomePage extends StatefulWidget {
 }
 
 class _MyHomePageState extends State<MyHomePage> {
-  static const double _itemHeight = 50;
-  static const double _itemFontSize = 28;
-
-//  int _counter = 0;
-
-//  void _incrementCounter() {
-//    setState(() {
-//      _counter++;
-//    });
-//  }
+  static const Color ITEM_COLOR = Colors.black54;
+  static const double ITEM_HEIGHT = 50;
+  static const double ITEM_FONT_SIZE = 28;
 
   @override
   Widget build(BuildContext context) {
@@ -53,22 +45,15 @@ class _MyHomePageState extends State<MyHomePage> {
       ),
       body: Center(
         child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
+          mainAxisAlignment: MainAxisAlignment.start,
           children: <Widget>[
-            GestureDetector(
-              child: Container(
-                height: _itemHeight,
-                color: Colors.black54,
-                alignment: Alignment.center,
-                child: Text(
-                  "StatelessWidget",
-                  style:
-                      TextStyle(color: Colors.white, fontSize: _itemFontSize),
-                ),
-              ),
-              onTap: () {
-                Navigator.pushNamed(context, "statelesswidget");
-              },
+            PageItemRoute(
+              routeName: "statelesswidget",
+              title: "StatelessWidget",
+            ),
+            PageItemRoute(
+              routeName: "statefulwidget",
+              title: "StatefulWidget",
             ),
           ],
         ),

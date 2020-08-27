@@ -3,9 +3,11 @@ import 'package:flutter/material.dart';
 import 'package:flutter_start/page/ContextRoutePage.dart';
 import 'package:flutter_start/page/StatefulWidgetPage.dart';
 import 'package:flutter_start/page/StatelessWidgetPage.dart';
+import 'package:flutter_start/page/TextPage.dart';
 import 'package:flutter_start/widget/PageRoute.dart';
 
 import 'page/GetStateInChildPage.dart';
+import 'page/StateManagementPage.dart';
 
 void main() {
   runApp(MyApp());
@@ -26,6 +28,8 @@ class MyApp extends StatelessWidget {
         "context_route" : (context) => ContextRoutePage(),
         "stateful_widget_route" : (context) => StatefulWidgetPage(),
         "get_state_route" : (context) => GetStateInChildPage(),
+        "state_control_route" : (context) => StateManagementPage(),
+        "text_page" : (context) => TextPage(),
       },
       home: MyHomePage(title: 'Flutter Demo Home Page'),
     );
@@ -69,6 +73,11 @@ class _MyHomePageState extends State<MyHomePage> {
               routeName: "get_state_route",
               title: "Get state in child note",
             ),
+            PageItemRoute(
+              routeName: "state_control_route",
+              title: "State Management",
+            ),
+            PageItemRoute(routeName: "text_page",title: "Text Widget"),
           ],
         ),
       ),

@@ -19,7 +19,7 @@ class MyState extends State<GetStateInChildPage> {
           return FlatButton(
             onPressed: () {
               ScaffoldState _state =
-                  context.findAncestorStateOfType<ScaffoldState>();
+                  Scaffold.of(context);
               _state.showSnackBar(SnackBar(
                 content: Icon(Icons.ac_unit),
               ));

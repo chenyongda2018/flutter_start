@@ -17,7 +17,7 @@ class PageItemRoute extends StatelessWidget {
   Widget build(BuildContext context) {
     return GestureDetector(
       child: Container(
-        margin: EdgeInsets.all(8),
+        margin: EdgeInsets.symmetric(vertical: 6,horizontal: 16),
         height: ITEM_HEIGHT,
         color: ITEM_COLOR,
         alignment: Alignment.center,

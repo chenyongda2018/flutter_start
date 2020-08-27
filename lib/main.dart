@@ -2,6 +2,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_start/page/ButtonPage.dart';
 import 'package:flutter_start/page/ContextRoutePage.dart';
+import 'package:flutter_start/page/ImagePageRoute.dart';
 import 'package:flutter_start/page/StatefulWidgetPage.dart';
 import 'package:flutter_start/page/StatelessWidgetPage.dart';
 import 'package:flutter_start/page/TextPage.dart';
@@ -32,6 +33,7 @@ class MyApp extends StatelessWidget {
         "state_control_route": (context) => StateManagementPage(),
         "text_page": (context) => TextPage(),
         "button_page": (context) => ButtonPage(),
+        "image_page" : (context) => ImagePage(),
       },
       home: MyHomePage(title: 'Flutter Demo Home Page'),
     );
@@ -82,6 +84,10 @@ class _MyHomePageState extends State<MyHomePage> {
             PageItemRoute(
               routeName: "button_page",
               title: "Button Widget",
+            ),
+            PageItemRoute(
+              routeName: "image_page",
+              title: "Image Widget",
             )
           ],
         ),

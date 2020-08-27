@@ -1,5 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_start/page/ButtonPage.dart';
 import 'package:flutter_start/page/ContextRoutePage.dart';
 import 'package:flutter_start/page/StatefulWidgetPage.dart';
 import 'package:flutter_start/page/StatelessWidgetPage.dart';
@@ -25,11 +26,12 @@ class MyApp extends StatelessWidget {
       ),
       routes: {
         "stateless_widget": (context) => StatelessWidgetPage(),
-        "context_route" : (context) => ContextRoutePage(),
-        "stateful_widget_route" : (context) => StatefulWidgetPage(),
-        "get_state_route" : (context) => GetStateInChildPage(),
-        "state_control_route" : (context) => StateManagementPage(),
-        "text_page" : (context) => TextPage(),
+        "context_route": (context) => ContextRoutePage(),
+        "stateful_widget_route": (context) => StatefulWidgetPage(),
+        "get_state_route": (context) => GetStateInChildPage(),
+        "state_control_route": (context) => StateManagementPage(),
+        "text_page": (context) => TextPage(),
+        "button_page": (context) => ButtonPage(),
       },
       home: MyHomePage(title: 'Flutter Demo Home Page'),
     );
@@ -46,7 +48,6 @@ class MyHomePage extends StatefulWidget {
 }
 
 class _MyHomePageState extends State<MyHomePage> {
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -77,7 +78,11 @@ class _MyHomePageState extends State<MyHomePage> {
               routeName: "state_control_route",
               title: "State Management",
             ),
-            PageItemRoute(routeName: "text_page",title: "Text Widget"),
+            PageItemRoute(routeName: "text_page", title: "Text Widget"),
+            PageItemRoute(
+              routeName: "button_page",
+              title: "Button Widget",
+            )
           ],
         ),
       ),

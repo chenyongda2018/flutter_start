@@ -5,6 +5,8 @@ import 'package:flutter_start/page/StatefulWidgetPage.dart';
 import 'package:flutter_start/page/StatelessWidgetPage.dart';
 import 'package:flutter_start/widget/PageRoute.dart';
 
+import 'page/GetStateInChildPage.dart';
+
 void main() {
   runApp(MyApp());
 }
@@ -23,6 +25,7 @@ class MyApp extends StatelessWidget {
         "stateless_widget": (context) => StatelessWidgetPage(),
         "context_route" : (context) => ContextRoutePage(),
         "stateful_widget_route" : (context) => StatefulWidgetPage(),
+        "get_state_route" : (context) => GetStateInChildPage(),
       },
       home: MyHomePage(title: 'Flutter Demo Home Page'),
     );
@@ -61,6 +64,10 @@ class _MyHomePageState extends State<MyHomePage> {
             PageItemRoute(
               routeName: "stateful_widget_route",
               title: "StatefulWidget",
+            ),
+            PageItemRoute(
+              routeName: "get_state_route",
+              title: "Get state in child note",
             ),
           ],
         ),

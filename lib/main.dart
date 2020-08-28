@@ -10,6 +10,7 @@ import 'package:flutter_start/page/TextPage.dart';
 import 'package:flutter_start/widget/PageRoute.dart';
 
 import 'page/GetStateInChildPage.dart';
+import 'page/IndicatorPage.dart';
 import 'page/StateManagementPage.dart';
 import 'page/TextFieldPage.dart';
 
@@ -38,6 +39,7 @@ class MyApp extends StatelessWidget {
         "image_page" : (context) => ImagePage(),
         "checkbox_page" : (context) => CheckBoxPage(),
         "text_field_page" : (context) => TextFieldPage(),
+        "indicator_page" : (context) => IndicatorPage(),
       },
       home: MyHomePage(title: 'Flutter Demo Home Page'),
     );
@@ -102,6 +104,10 @@ class _MyHomePageState extends State<MyHomePage> {
             PageItemRoute(
               routeName: "text_field_page",
               title: "TextField Widget",
+            ),
+            PageItemRoute(
+              routeName: "indicator_page",
+              title: "Indicator Widget",
             ),
           ],
         ),

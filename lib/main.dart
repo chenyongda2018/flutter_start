@@ -1,6 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_start/page/ButtonPage.dart';
+import 'package:flutter_start/page/CheckBoxPage.dart';
 import 'package:flutter_start/page/ContextRoutePage.dart';
 import 'package:flutter_start/page/ImagePageRoute.dart';
 import 'package:flutter_start/page/StatefulWidgetPage.dart';
@@ -34,6 +35,7 @@ class MyApp extends StatelessWidget {
         "text_page": (context) => TextPage(),
         "button_page": (context) => ButtonPage(),
         "image_page" : (context) => ImagePage(),
+        "checkbox_page" : (context) => CheckBoxPage(),
       },
       home: MyHomePage(title: 'Flutter Demo Home Page'),
     );
@@ -56,7 +58,7 @@ class _MyHomePageState extends State<MyHomePage> {
       appBar: AppBar(
         title: Text(widget.title),
       ),
-      body: Center(
+      body: SingleChildScrollView(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.start,
           children: <Widget>[
@@ -80,7 +82,9 @@ class _MyHomePageState extends State<MyHomePage> {
               routeName: "state_control_route",
               title: "State Management",
             ),
-            PageItemRoute(routeName: "text_page", title: "Text Widget"),
+            PageItemRoute(
+                routeName: "text_page",
+                title: "Text Widget"),
             PageItemRoute(
               routeName: "button_page",
               title: "Button Widget",
@@ -88,7 +92,11 @@ class _MyHomePageState extends State<MyHomePage> {
             PageItemRoute(
               routeName: "image_page",
               title: "Image Widget",
-            )
+            ),
+            PageItemRoute(
+              routeName: "checkbox_page",
+              title: "Checkbox Widget",
+            ),
           ],
         ),
       ),

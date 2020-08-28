@@ -7,7 +7,7 @@ class ImagePage extends StatelessWidget {
       appBar: AppBar(
         title: Text("Image Widget"),
       ),
-      body: Center(
+      body: SingleChildScrollView(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.start,
           mainAxisSize: MainAxisSize.max,
@@ -16,9 +16,40 @@ class ImagePage extends StatelessWidget {
               image: AssetImage("images/wzry_01.jpeg"),
             ),
             Image(
-              image: NetworkImage(
-                  "https://avatars2.githubusercontent.com/u/20411648?s=460&v=4"),
-              height: 100,
+              width: 150,
+              height: 150,
+              image: AssetImage("images/wzry_01.jpeg"),
+              fit: BoxFit.contain,
+            ),
+            Image(
+              width: 150,
+              height: 150,
+              image: AssetImage("images/wzry_01.jpeg"),
+              fit: BoxFit.cover,
+            ),
+            Image(
+              width: 150,
+              height: 150,
+              image: AssetImage("images/wzry_01.jpeg"),
+              fit: BoxFit.fill,
+            ),
+            Image(
+              width: 150,
+              height: 150,
+              image: AssetImage("images/wzry_01.jpeg"),
+              fit: BoxFit.fitHeight,
+            ),
+            Image(
+              width: 150,
+              height: 150,
+              image: AssetImage("images/wzry_01.jpeg"),
+              fit: BoxFit.fitWidth,
+            ),
+            Image(
+              width: 150,
+              height: 150,
+              image: AssetImage("images/wzry_01.jpeg"),
+              fit: BoxFit.none,
             ),
             Row(
               children: [

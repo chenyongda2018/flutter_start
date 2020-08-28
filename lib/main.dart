@@ -14,6 +14,7 @@ import 'page/GetStateInChildPage.dart';
 import 'page/IndicatorPage.dart';
 import 'page/StateManagementPage.dart';
 import 'page/TextFieldPage.dart';
+import 'page/WrapFlowPage.dart';
 
 void main() {
   runApp(MyApp());
@@ -42,6 +43,7 @@ class MyApp extends StatelessWidget {
         "text_field_page" : (context) => TextFieldPage(),
         "indicator_page" : (context) => IndicatorPage(),
         "flex_page" : (context) => FlexPage(),
+        "wrap_flow_page" : (context) => WrapFlowPage(),
       },
       home: MyHomePage(title: 'Flutter Demo Home Page'),
     );
@@ -114,6 +116,10 @@ class _MyHomePageState extends State<MyHomePage> {
             PageItemRoute(
               routeName: "flex_page",
               title: "Flex & Expand Widget",
+            ),
+            PageItemRoute(
+              routeName: "wrap_flow_page",
+              title: "Wrap & Flow Widget",
             ),
           ],
         ),

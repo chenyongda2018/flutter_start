@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_start/page/ButtonPage.dart';
 import 'package:flutter_start/page/CheckBoxPage.dart';
 import 'package:flutter_start/page/ContextRoutePage.dart';
+import 'package:flutter_start/page/FlexPage.dart';
 import 'package:flutter_start/page/ImagePageRoute.dart';
 import 'package:flutter_start/page/StatefulWidgetPage.dart';
 import 'package:flutter_start/page/StatelessWidgetPage.dart';
@@ -40,6 +41,7 @@ class MyApp extends StatelessWidget {
         "checkbox_page" : (context) => CheckBoxPage(),
         "text_field_page" : (context) => TextFieldPage(),
         "indicator_page" : (context) => IndicatorPage(),
+        "flex_page" : (context) => FlexPage(),
       },
       home: MyHomePage(title: 'Flutter Demo Home Page'),
     );
@@ -108,6 +110,10 @@ class _MyHomePageState extends State<MyHomePage> {
             PageItemRoute(
               routeName: "indicator_page",
               title: "Indicator Widget",
+            ),
+            PageItemRoute(
+              routeName: "flex_page",
+              title: "Flex & Expand Widget",
             ),
           ],
         ),

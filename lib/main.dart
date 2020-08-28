@@ -11,6 +11,7 @@ import 'package:flutter_start/widget/PageRoute.dart';
 
 import 'page/GetStateInChildPage.dart';
 import 'page/StateManagementPage.dart';
+import 'page/TextFieldPage.dart';
 
 void main() {
   runApp(MyApp());
@@ -36,6 +37,7 @@ class MyApp extends StatelessWidget {
         "button_page": (context) => ButtonPage(),
         "image_page" : (context) => ImagePage(),
         "checkbox_page" : (context) => CheckBoxPage(),
+        "text_field_page" : (context) => TextFieldPage(),
       },
       home: MyHomePage(title: 'Flutter Demo Home Page'),
     );
@@ -96,6 +98,10 @@ class _MyHomePageState extends State<MyHomePage> {
             PageItemRoute(
               routeName: "checkbox_page",
               title: "Checkbox Widget",
+            ),
+            PageItemRoute(
+              routeName: "text_field_page",
+              title: "TextField Widget",
             ),
           ],
         ),

@@ -1,7 +1,9 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_start/page/AlignPage.dart';
 import 'package:flutter_start/page/ButtonPage.dart';
 import 'package:flutter_start/page/CheckBoxPage.dart';
+import 'package:flutter_start/page/ContainerLayoutPage.dart';
 import 'package:flutter_start/page/ContextRoutePage.dart';
 import 'package:flutter_start/page/FlexPage.dart';
 import 'package:flutter_start/page/ImagePageRoute.dart';
@@ -44,6 +46,8 @@ class MyApp extends StatelessWidget {
         "indicator_page" : (context) => IndicatorPage(),
         "flex_page" : (context) => FlexPage(),
         "wrap_flow_page" : (context) => WrapFlowPage(),
+        "align_page" : (context) => AlignPage(),
+        "container_page" : (context) => ContainerLayout(),
       },
       home: MyHomePage(title: 'Flutter Demo Home Page'),
     );
@@ -120,6 +124,14 @@ class _MyHomePageState extends State<MyHomePage> {
             PageItemRoute(
               routeName: "wrap_flow_page",
               title: "Wrap & Flow Widget",
+            ),
+            PageItemRoute(
+              routeName: "align_page",
+              title: "Align Widget",
+            ),
+            PageItemRoute(
+              routeName: "container_page",
+              title: "容器类 Widget",
             ),
           ],
         ),

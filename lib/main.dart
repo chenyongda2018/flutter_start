@@ -8,6 +8,7 @@ import 'package:flutter_start/page/ContextRoutePage.dart';
 import 'package:flutter_start/page/FlexPage.dart';
 import 'package:flutter_start/page/ImagePageRoute.dart';
 import 'package:flutter_start/page/ScaffordPage.dart';
+import 'package:flutter_start/page/ScrollPage.dart';
 import 'package:flutter_start/page/StatefulWidgetPage.dart';
 import 'package:flutter_start/page/StatelessWidgetPage.dart';
 import 'package:flutter_start/page/TextPage.dart';
@@ -41,15 +42,16 @@ class MyApp extends StatelessWidget {
         "state_control_route": (context) => StateManagementPage(),
         "text_page": (context) => TextPage(),
         "button_page": (context) => ButtonPage(),
-        "image_page" : (context) => ImagePage(),
-        "checkbox_page" : (context) => CheckBoxPage(),
-        "text_field_page" : (context) => TextFieldPage(),
-        "indicator_page" : (context) => IndicatorPage(),
-        "flex_page" : (context) => FlexPage(),
-        "wrap_flow_page" : (context) => WrapFlowPage(),
-        "align_page" : (context) => AlignPage(),
-        "container_page" : (context) => ContainerLayout(),
-        "scaffold_page" : (context) =>ScaffoldPage(),
+        "image_page": (context) => ImagePage(),
+        "checkbox_page": (context) => CheckBoxPage(),
+        "text_field_page": (context) => TextFieldPage(),
+        "indicator_page": (context) => IndicatorPage(),
+        "flex_page": (context) => FlexPage(),
+        "wrap_flow_page": (context) => WrapFlowPage(),
+        "align_page": (context) => AlignPage(),
+        "container_page": (context) => ContainerLayout(),
+        "scaffold_page": (context) => ScaffoldPage(),
+        "scroll_page": (context) => ScrollPage(),
       },
       home: MyHomePage(title: 'Flutter Demo Home Page'),
     );
@@ -73,6 +75,8 @@ class _MyHomePageState extends State<MyHomePage> {
         title: Text(widget.title),
       ),
       body: SingleChildScrollView(
+        scrollDirection: Axis.vertical,
+        reverse: false,
         child: Column(
           mainAxisAlignment: MainAxisAlignment.start,
           children: <Widget>[
@@ -96,9 +100,7 @@ class _MyHomePageState extends State<MyHomePage> {
               routeName: "state_control_route",
               title: "State Management",
             ),
-            PageItemRoute(
-                routeName: "text_page",
-                title: "Text Widget"),
+            PageItemRoute(routeName: "text_page", title: "Text Widget"),
             PageItemRoute(
               routeName: "button_page",
               title: "Button Widget",
@@ -138,6 +140,10 @@ class _MyHomePageState extends State<MyHomePage> {
             PageItemRoute(
               routeName: "scaffold_page",
               title: "Scaffold",
+            ),
+            PageItemRoute(
+              routeName: "scroll_page",
+              title: "可滚动组件",
             ),
           ],
         ),

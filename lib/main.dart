@@ -7,6 +7,7 @@ import 'package:flutter_start/page/ContainerLayoutPage.dart';
 import 'package:flutter_start/page/ContextRoutePage.dart';
 import 'package:flutter_start/page/FlexPage.dart';
 import 'package:flutter_start/page/ImagePageRoute.dart';
+import 'package:flutter_start/page/ScaffordPage.dart';
 import 'package:flutter_start/page/StatefulWidgetPage.dart';
 import 'package:flutter_start/page/StatelessWidgetPage.dart';
 import 'package:flutter_start/page/TextPage.dart';
@@ -48,6 +49,7 @@ class MyApp extends StatelessWidget {
         "wrap_flow_page" : (context) => WrapFlowPage(),
         "align_page" : (context) => AlignPage(),
         "container_page" : (context) => ContainerLayout(),
+        "scaffold_page" : (context) =>ScaffoldPage(),
       },
       home: MyHomePage(title: 'Flutter Demo Home Page'),
     );
@@ -132,6 +134,10 @@ class _MyHomePageState extends State<MyHomePage> {
             PageItemRoute(
               routeName: "container_page",
               title: "容器类 Widget",
+            ),
+            PageItemRoute(
+              routeName: "scaffold_page",
+              title: "Scaffold",
             ),
           ],
         ),

@@ -46,7 +46,7 @@ class TextPage extends StatelessWidget {
                   children: [
                     TextSpan(
                       text: "http://www.baidu.com",
-                      style: TextStyle(color: Colors.blue)
+                      style: TextStyle(color: Colors.blue),
                     ),
                     TextSpan(
                       text: "http://www.baidu.com",
@@ -59,6 +59,10 @@ class TextPage extends StatelessWidget {
                     ),
                     TextSpan(
                       text: "http://www.baidu.com",
+                    ),
+                    WidgetSpan(
+                      child: Icon(Icons.arrow_upward)
+
                     ),
                   ],
                 ),

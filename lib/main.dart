@@ -8,6 +8,7 @@ import 'package:flutter_start/page/ContextRoutePage.dart';
 import 'package:flutter_start/page/CustomScrollViewPage.dart';
 import 'package:flutter_start/page/FlexPage.dart';
 import 'package:flutter_start/page/ImagePageRoute.dart';
+import 'package:flutter_start/page/RichTextEditPage.dart';
 import 'package:flutter_start/page/ScaffordPage.dart';
 import 'package:flutter_start/page/ScrollPage.dart';
 import 'package:flutter_start/page/StatefulWidgetPage.dart';
@@ -54,6 +55,7 @@ class MyApp extends StatelessWidget {
         "scaffold_page": (context) => ScaffoldPage(),
         "scroll_page": (context) => ScrollPage(),
         "custom_scroll_page": (context) => CustomScrollViewPage(),
+        "rich_text_edit": (context) => RichTextEditPage(),
       },
       home: MyHomePage(title: 'Flutter Demo Home Page'),
     );
@@ -82,6 +84,10 @@ class _MyHomePageState extends State<MyHomePage> {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.start,
           children: <Widget>[
+            PageItemRoute(
+              routeName: "rich_text_edit",
+              title: "Rich Text Edit",
+            ),
             PageItemRoute(
               routeName: "stateless_widget",
               title: "StatelessWidget",

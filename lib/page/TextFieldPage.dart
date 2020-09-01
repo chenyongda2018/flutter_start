@@ -2,17 +2,11 @@ import 'package:flutter/material.dart';
 
 ///
 class TextFieldPage extends StatelessWidget {
-
   TextEditingController _textEditingController = TextEditingController();
 
   @override
   Widget build(BuildContext context) {
-
     _textEditingController.text = "123456789";
-    _textEditingController.selection = TextSelection(
-      baseOffset: 2,
-      extentOffset: _textEditingController.text.length,
-    );// 设置选中区域
 
     return Scaffold(
       appBar: AppBar(
@@ -47,7 +41,7 @@ class TextFieldPage extends StatelessWidget {
                       ),
                     ),
                     TextField(
-                      controller: _textEditingController,//.text可获取输入内容
+                      controller: _textEditingController, //.text可获取输入内容
                       decoration: InputDecoration(
                         prefixIcon: Icon(Icons.phone),
                         labelText: "Phone",

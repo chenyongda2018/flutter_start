@@ -5,6 +5,7 @@ import 'package:flutter_start/page/ButtonPage.dart';
 import 'package:flutter_start/page/CheckBoxPage.dart';
 import 'package:flutter_start/page/ContainerLayoutPage.dart';
 import 'package:flutter_start/page/ContextRoutePage.dart';
+import 'package:flutter_start/page/CustomScrollViewPage.dart';
 import 'package:flutter_start/page/FlexPage.dart';
 import 'package:flutter_start/page/ImagePageRoute.dart';
 import 'package:flutter_start/page/ScaffordPage.dart';
@@ -52,6 +53,7 @@ class MyApp extends StatelessWidget {
         "container_page": (context) => ContainerLayout(),
         "scaffold_page": (context) => ScaffoldPage(),
         "scroll_page": (context) => ScrollPage(),
+        "custom_scroll_page": (context) => CustomScrollViewPage(),
       },
       home: MyHomePage(title: 'Flutter Demo Home Page'),
     );
@@ -144,6 +146,10 @@ class _MyHomePageState extends State<MyHomePage> {
             PageItemRoute(
               routeName: "scroll_page",
               title: "可滚动组件",
+            ),
+            PageItemRoute(
+              routeName: "custom_scroll_page",
+              title: "CustomScrollView",
             ),
           ],
         ),

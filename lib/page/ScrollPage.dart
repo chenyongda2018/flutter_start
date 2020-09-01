@@ -3,6 +3,7 @@ import 'package:flutter_start/page/CustomScrollViewPage.dart';
 import 'package:flutter_start/page/ListViewPage.dart';
 import 'package:flutter_start/page/ListViewTestTwoPage.dart';
 
+import 'ScrollNotificationPage.dart';
 import 'SingleChildScrollViewPage.dart';
 
 class ScrollPage extends StatefulWidget {
@@ -17,7 +18,7 @@ class _ScrollPageState extends State<ScrollPage>
   var _tabs = [
     "SingleChildScrollView",
     "ListViewTest1",
-    "ListViewTest2",
+    "ScrollNotificationPage",
     "GridView",
     "CustomScrollView"
   ];
@@ -48,7 +49,7 @@ class _ScrollPageState extends State<ScrollPage>
         children: <Widget>[
           SingleChildScrollViewPage(),
           ListViewPage(),
-          ListViewTestTwo(),
+          ScrollNotificationPage(),
           SingleChildScrollViewPage(),
           CustomScrollViewPage(),
         ],

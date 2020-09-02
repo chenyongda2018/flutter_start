@@ -34,6 +34,7 @@ class _RichTextEditPageState extends State<RichTextEditPage> {
               padding: EdgeInsets.all(16),
               controller: _controller,
               focusNode: _focusNode,
+              mode:ZefyrMode.edit,
               imageDelegate: MyAppZefyrImageDelegate(),
             ),
           );

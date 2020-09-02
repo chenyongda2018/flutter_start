@@ -1,3 +1,5 @@
+import 'dart:ui';
+
 import 'package:flutter/material.dart';
 
 class MyPainter extends CustomPainter {
@@ -14,7 +16,6 @@ class MyPainter extends CustomPainter {
       ..style = PaintingStyle.fill;
 
     canvas.drawRect(Offset.zero & size, painter);
-
     painter
     ..style = PaintingStyle.stroke
     ..color = Colors.black54

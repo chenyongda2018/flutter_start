@@ -1,12 +1,6 @@
-
 import 'package:flutter/material.dart';
-import 'package:flutter_start/page/CustomScrollViewPage.dart';
-import 'package:flutter_start/page/ListViewPage.dart';
-import 'package:flutter_start/page/ListViewTestTwoPage.dart';
 import 'package:flutter_start/widget/MyButton.dart';
-
-import 'ScrollNotificationPage.dart';
-import 'SingleChildScrollViewPage.dart';
+import 'package:flutter_start/widget/MyPaintWidget.dart';
 
 class CustomViewPage extends StatefulWidget {
   @override
@@ -39,8 +33,8 @@ class _CustomViewPageState extends State<CustomViewPage>
           isScrollable: true,
           tabs: _tabs
               .map((e) => Tab(
-            text: e,
-          ))
+                    text: e,
+                  ))
               .toList(),
         ),
       ),
@@ -51,7 +45,7 @@ class _CustomViewPageState extends State<CustomViewPage>
             child: Column(
               children: <Widget>[
                 MyButton(
-                  colors: [Colors.red,Colors.blue,Colors.blueGrey],
+                  colors: [Colors.red, Colors.blue, Colors.blueGrey],
                   height: 50,
                   width: 100,
                   radius: BorderRadius.circular(8),
@@ -64,26 +58,19 @@ class _CustomViewPageState extends State<CustomViewPage>
             ),
           ),
           Center(
-            child: Column(
-              children: <Widget>[
-                MyButton(
-                  colors: [Colors.transparent,Colors.blue],
-                  height: 50,
-                  width: 100,
-                  radius: BorderRadius.circular(8),
-                  onTap: () {
-                    print("onclick");
-                  },
-                  child: Text("LOGIN"),
-                ),
-              ],
+            child: Container(
+              margin: const EdgeInsets.all(10),
+              child: CustomPaint(
+                painter: MyPainter(),
+                size: Size(400, 400),
+              ),
             ),
           ),
           Center(
             child: Column(
               children: <Widget>[
                 MyButton(
-                  colors: [Colors.red,Colors.blue],
+                  colors: [Colors.red, Colors.blue],
                   height: 50,
                   width: 100,
                   radius: BorderRadius.circular(8),

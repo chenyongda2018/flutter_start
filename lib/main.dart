@@ -1,4 +1,3 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_start/page/AlignPage.dart';
 import 'package:flutter_start/page/ButtonPage.dart';
@@ -21,6 +20,7 @@ import 'page/IndicatorPage.dart';
 import 'page/StateManagementPage.dart';
 import 'page/TextFieldPage.dart';
 import 'page/WrapFlowPage.dart';
+import 'page/custom_view_page.dart';
 
 void main() {
   runApp(MyApp());
@@ -56,6 +56,7 @@ class MyApp extends StatelessWidget {
         "scroll_page": (context) => ScrollPage(),
         "custom_scroll_page": (context) => CustomScrollViewPage(),
         "rich_text_edit": (context) => RichTextEditPage(),
+        "custom_view_page": (context) => CustomViewPage(),
       },
       home: MyHomePage(title: 'Flutter Demo Home Page'),
     );
@@ -156,6 +157,10 @@ class _MyHomePageState extends State<MyHomePage> {
             PageItemRoute(
               routeName: "custom_scroll_page",
               title: "CustomScrollView",
+            ),
+            PageItemRoute(
+              routeName: "custom_view_page",
+              title: "Custom Widget",
             ),
           ],
         ),

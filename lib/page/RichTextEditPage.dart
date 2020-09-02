@@ -3,6 +3,7 @@ import 'package:zefyr/zefyr.dart';
 import 'package:quill_delta/quill_delta.dart';
 import 'dart:convert'; // access to jsonEncode()
 import 'dart:io';
+import 'package:flutter_start/controller/zefy_image_delegate.dart';
 
 class RichTextEditPage extends StatefulWidget {
   @override
@@ -20,24 +21,22 @@ class _RichTextEditPageState extends State<RichTextEditPage> {
     _loadDocument().then((document) {
       setState(() {
         _controller = ZefyrController(document);
-
       });
     });
   }
-
-
 
   @override
   Widget build(BuildContext context) {
     final Widget body = (_controller == null)
         ? Center(child: CircularProgressIndicator())
         : ZefyrScaffold(
-      child: ZefyrEditor(
-        padding: EdgeInsets.all(16),
-        controller: _controller,
-        focusNode: _focusNode,
-      ),
-    );
+            child: ZefyrEditor(
+              padding: EdgeInsets.all(16),
+              controller: _controller,
+              focusNode: _focusNode,
+              imageDelegate: MyAppZefyrImageDelegate(),
+            ),
+          );
 
     return Scaffold(
       appBar: AppBar(

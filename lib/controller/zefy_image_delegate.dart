@@ -1,8 +1,12 @@
 import 'package:flutter/src/widgets/framework.dart';
 import 'package:image_picker/image_picker.dart';
 import 'package:zefyr/src/widgets/image.dart';
+import 'dart:io';
+import 'package:flutter/material.dart';
 
 class MyAppZefyrImageDelegate implements ZefyrImageDelegate<ImageSource> {
+
+
   @override
   Future<String> pickImage(ImageSource source) async {
     final file = await ImagePicker.pickImage(source: source);
@@ -13,13 +17,17 @@ class MyAppZefyrImageDelegate implements ZefyrImageDelegate<ImageSource> {
 
   @override
   Widget buildImage(BuildContext context, String key) {
-    // TODO: implement buildImage
-    throw UnimplementedError();
+    final file = File.fromUri(Uri.parse(key));
+    final image = FileImage(file);
+    return Image(
+      image: image,
+    );
+
   }
 
   @override
-  ImageSource get cameraSource => throw UnimplementedError();
+  ImageSource get cameraSource => ImageSource.camera;
 
   @override
-  ImageSource get gallerySource => throw UnimplementedError();
+  ImageSource get gallerySource => ImageSource.gallery;
 }

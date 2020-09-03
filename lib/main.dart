@@ -14,6 +14,7 @@ import 'package:flutter_start/page/StatefulWidgetPage.dart';
 import 'package:flutter_start/page/StatelessWidgetPage.dart';
 import 'package:flutter_start/page/TextPage.dart';
 import 'package:flutter_start/page/inherited_page.dart';
+import 'package:flutter_start/page/provider_route_page.dart';
 import 'package:flutter_start/widget/PageRoute.dart';
 
 import 'page/GetStateInChildPage.dart';
@@ -59,6 +60,7 @@ class MyApp extends StatelessWidget {
         "rich_text_edit": (context) => RichTextEditPage(),
         "custom_view_page": (context) => CustomViewPage(),
         "inherited_page": (context) => InheritedPage(),
+        "provider_page": (context) => ProviderPage(),
       },
       home: MyHomePage(title: 'Flutter Demo Home Page'),
     );
@@ -167,6 +169,10 @@ class _MyHomePageState extends State<MyHomePage> {
             PageItemRoute(
               routeName: "inherited_page",
               title: "Inherited Widget",
+            ),
+            PageItemRoute(
+              routeName: "provider_page",
+              title: "Provider Widget",
             ),
           ],
         ),

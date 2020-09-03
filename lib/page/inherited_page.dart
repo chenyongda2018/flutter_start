@@ -1,20 +1,19 @@
 import 'package:flutter/material.dart';
 
-
 class InheritedPage extends StatefulWidget {
   @override
   _InheritedPageState createState() => _InheritedPageState();
 }
 
 class _InheritedPageState extends State<InheritedPage> {
-
-
   int _count = 0;
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: Text("Inherited Widget"),),
+      appBar: AppBar(
+        title: Text("Inherited Widget"),
+      ),
       body: Center(
         child: SharedDataWidget(
           data: _count,
@@ -33,25 +32,7 @@ class _InheritedPageState extends State<InheritedPage> {
   }
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 class SharedDataWidget extends InheritedWidget {
-
   SharedDataWidget({@required this.data, Widget child}) : super(child: child);
 
   final int data;
@@ -66,14 +47,12 @@ class SharedDataWidget extends InheritedWidget {
   }
 }
 
-
 class TestInheritedWidget extends StatefulWidget {
   @override
   _TestInheritedWidgetState createState() => _TestInheritedWidgetState();
 }
 
 class _TestInheritedWidgetState extends State<TestInheritedWidget> {
-
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -86,11 +65,9 @@ class _TestInheritedWidgetState extends State<TestInheritedWidget> {
     );
   }
 
-
   @override
   void didChangeDependencies() {
     super.didChangeDependencies();
     print("TestInheritedWidget.didChangeDependencies");
   }
 }
-

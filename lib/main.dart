@@ -13,6 +13,7 @@ import 'package:flutter_start/page/ScrollPage.dart';
 import 'package:flutter_start/page/StatefulWidgetPage.dart';
 import 'package:flutter_start/page/StatelessWidgetPage.dart';
 import 'package:flutter_start/page/TextPage.dart';
+import 'package:flutter_start/page/inherited_page.dart';
 import 'package:flutter_start/widget/PageRoute.dart';
 
 import 'page/GetStateInChildPage.dart';
@@ -57,6 +58,7 @@ class MyApp extends StatelessWidget {
         "custom_scroll_page": (context) => CustomScrollViewPage(),
         "rich_text_edit": (context) => RichTextEditPage(),
         "custom_view_page": (context) => CustomViewPage(),
+        "inherited_page": (context) => InheritedPage(),
       },
       home: MyHomePage(title: 'Flutter Demo Home Page'),
     );
@@ -161,6 +163,10 @@ class _MyHomePageState extends State<MyHomePage> {
             PageItemRoute(
               routeName: "custom_view_page",
               title: "Custom Widget",
+            ),
+            PageItemRoute(
+              routeName: "inherited_page",
+              title: "Inherited Widget",
             ),
           ],
         ),

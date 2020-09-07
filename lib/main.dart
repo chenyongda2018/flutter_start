@@ -17,6 +17,8 @@ import 'package:flutter_start/page/inherited_page.dart';
 import 'package:flutter_start/page/provider_route_page.dart';
 import 'package:flutter_start/widget/PageRoute.dart';
 
+import 'chapter_8_event_notification/page/gesture_dectector_page.dart';
+import 'chapter_8_event_notification/page/point_event_page.dart';
 import 'page/GetStateInChildPage.dart';
 import 'page/IndicatorPage.dart';
 import 'page/StateManagementPage.dart';
@@ -37,7 +39,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'Flutter Demo',
       theme: ThemeData(
-        primaryColor: Colors.amberAccent,
+        primaryColor: Colors.blue,
         primarySwatch: Colors.blue,
         visualDensity: VisualDensity.adaptivePlatformDensity,
 
@@ -67,6 +69,8 @@ class MyApp extends StatelessWidget {
         "provider_page": (context) => ProviderPage(),
         "future_builder_page": (context) => FutureBuilderPage(),
         "dialog_page": (context) => DialogPage(),
+        "point_event_page": (context) => PointEventPage(),
+        "gesture_detector_page": (context) => GestureDetectorPage(),
       },
       home: MyHomePage(title: 'Flutter Demo Home Page'),
     );
@@ -186,6 +190,14 @@ class _MyHomePageState extends State<MyHomePage> {
             PageItemRoute(
               routeName: "dialog_page",
               title: "Dialog widget",
+            ),
+            PageItemRoute(
+              routeName: "point_event_page",
+              title: "Point Event",
+            ),
+            PageItemRoute(
+              routeName: "gesture_detector_page",
+              title: "GestureDetector",
             ),
           ],
         ),

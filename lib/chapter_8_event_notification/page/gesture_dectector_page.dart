@@ -11,6 +11,8 @@ class _GestureDetectorPageState extends State<GestureDetectorPage> {
   double _left = 0.0;
   double _top = 0.0;
 
+  double _width = 200;
+
   void _updateEventStr(String event) {
     setState(() {
       _event = event;
@@ -19,29 +21,37 @@ class _GestureDetectorPageState extends State<GestureDetectorPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: Text("GestureDetector"),),
-      body: Center(
-        child: Stack(
-          children: <Widget>[
-            Positioned(
-              left: _left,
-              top: _top,
-              child: GestureDetector(
-                onPanUpdate: (DragUpdateDetails details) {
-                  setState(() {
-                    _left += details.delta.dx;
-                    _top += details.delta.dy;
-                  });
-                },
+      appBar: AppBar(title: Text("GestureDetector")),
+      body: Stack(
+        alignment: Alignment.center,
 
-                child: CircleAvatar(
-                  child: Text("A"),
-                  backgroundColor: Colors.blue,
-                ),
+        children: <Widget>[
+          GestureDetector(
+            onScaleUpdate: (ScaleUpdateDetails s) {
+              setState(() {
+                _width = 200 * s.scale.clamp(0.5, 10);
+              });
+            },
+            child: Image.asset("images/wzry_01.jpeg",width: _width,),
+          ),
+          Positioned(
+            left: _left,
+            top: _top,
+            child: GestureDetector(
+              onPanUpdate: (DragUpdateDetails details) {
+                setState(() {
+//                    _left += details.delta.dx;
+                  _top += details.delta.dy;
+                });
+              },
+
+              child: CircleAvatar(
+                child: Text("A"),
+                backgroundColor: Colors.blue,
               ),
-            )
-          ],
-        ),
+            ),
+          )
+        ],
       ),
     );
   }

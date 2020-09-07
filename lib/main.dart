@@ -23,6 +23,7 @@ import 'page/StateManagementPage.dart';
 import 'page/TextFieldPage.dart';
 import 'page/WrapFlowPage.dart';
 import 'page/custom_view_page.dart';
+import 'page/future_builder_page.dart';
 
 void main() {
   runApp(MyApp());
@@ -63,6 +64,7 @@ class MyApp extends StatelessWidget {
         "custom_view_page": (context) => CustomViewPage(),
         "inherited_page": (context) => InheritedPage(),
         "provider_page": (context) => ProviderPage(),
+        "future_builder_page": (context) => FutureBuilderPage(),
       },
       home: MyHomePage(title: 'Flutter Demo Home Page'),
     );
@@ -175,6 +177,10 @@ class _MyHomePageState extends State<MyHomePage> {
             PageItemRoute(
               routeName: "provider_page",
               title: "Provider Widget",
+            ),
+            PageItemRoute(
+              routeName: "future_builder_page",
+              title: "FutureBuilder",
             ),
           ],
         ),

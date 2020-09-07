@@ -23,6 +23,7 @@ import 'page/StateManagementPage.dart';
 import 'page/TextFieldPage.dart';
 import 'page/WrapFlowPage.dart';
 import 'page/custom_view_page.dart';
+import 'page/dialog_page.dart';
 import 'page/future_builder_page.dart';
 
 void main() {
@@ -65,6 +66,7 @@ class MyApp extends StatelessWidget {
         "inherited_page": (context) => InheritedPage(),
         "provider_page": (context) => ProviderPage(),
         "future_builder_page": (context) => FutureBuilderPage(),
+        "dialog_page": (context) => DialogPage(),
       },
       home: MyHomePage(title: 'Flutter Demo Home Page'),
     );
@@ -79,7 +81,6 @@ class MyHomePage extends StatefulWidget {
   @override
   _MyHomePageState createState() => _MyHomePageState();
 }
-
 class _MyHomePageState extends State<MyHomePage> {
   @override
   Widget build(BuildContext context) {
@@ -181,6 +182,10 @@ class _MyHomePageState extends State<MyHomePage> {
             PageItemRoute(
               routeName: "future_builder_page",
               title: "FutureBuilder",
+            ),
+            PageItemRoute(
+              routeName: "dialog_page",
+              title: "Dialog widget",
             ),
           ],
         ),

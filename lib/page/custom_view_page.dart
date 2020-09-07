@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_start/widget/MyButton.dart';
 import 'package:flutter_start/widget/MyPaintWidget.dart';
+import 'package:flutter_start/widget/NavBar.dart';
 
 class CustomViewPage extends StatefulWidget {
   @override
@@ -53,6 +54,20 @@ class _CustomViewPageState extends State<CustomViewPage>
                     print("onclick");
                   },
                   child: Text("LOGIN"),
+                ),
+                SizedBox(
+                  height: 50,
+                ),
+                NavBar(
+                  title: "标题1",
+                  color: Colors.blueGrey,
+                ),
+                SizedBox(
+                  height: 50,
+                ),
+                NavBar(
+                  title: "标题2",
+                  color: Colors.amberAccent,
                 ),
               ],
             ),

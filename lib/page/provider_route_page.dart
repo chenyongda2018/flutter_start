@@ -35,6 +35,7 @@ class _ProviderPageState extends State<ProviderPage> {
                       //给购物车中添加商品，添加后总价会更新
                       ChangeNotifierProvider.of<Cart>(context, listen: true)
                           .addItem(Product(20.0, 1));
+
                     },
                   );
                 }),

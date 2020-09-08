@@ -31,18 +31,17 @@ class PageItemRoute extends StatelessWidget {
         ),
       ),
       onTap: () {
-        Navigator.push(context,PageRouteBuilder(
-          transitionDuration: Duration(milliseconds: 200),
-          pageBuilder: (BuildContext context, Animation animation,
-              Animation secondaryAnimation) {
-            return FadeTransition(
-              opacity: animation,
-              child: RouteMap.routes[routeName],
-            );
-          }
-        ));
-//        Navigator.pushNamed(context, routeName);
-
+//        Navigator.push(context,PageRouteBuilder(
+//          transitionDuration: Duration(milliseconds: 200),
+//          pageBuilder: (BuildContext context, Animation animation,
+//              Animation secondaryAnimation) {
+//            return FadeTransition(
+//              opacity: animation,
+//              child: RouteMap.routes[routeName],
+//            );
+//          }
+//        ));
+        Navigator.pushNamed(context, routeName);
       },
     );
   }

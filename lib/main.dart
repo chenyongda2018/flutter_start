@@ -17,6 +17,7 @@ import 'package:flutter_start/page/StatelessWidgetPage.dart';
 import 'package:flutter_start/page/TextPage.dart';
 import 'package:flutter_start/page/inherited_page.dart';
 import 'package:flutter_start/page/provider_route_page.dart';
+import 'package:flutter_start/route_map.dart';
 import 'package:flutter_start/widget/PageRoute.dart';
 
 import 'chapter_8_event_notification/page/gesture_dectector_page.dart';
@@ -46,36 +47,7 @@ class MyApp extends StatelessWidget {
         primarySwatch: Colors.blue,
         visualDensity: VisualDensity.adaptivePlatformDensity,
       ),
-//      routes: {
-//        "stateless_widget": (context) => StatelessWidgetPage(),
-//        "context_route": (context) => ContextRoutePage(),
-//        "stateful_widget_route": (context) => StatefulWidgetPage(),
-//        "get_state_route": (context) => GetStateInChildPage(),
-//        "state_control_route": (context) => StateManagementPage(),
-//        "text_page": (context) => TextPage(),
-//        "button_page": (context) => ButtonPage(),
-//        "image_page": (context) => ImagePage(),
-//        "checkbox_page": (context) => CheckBoxPage(),
-//        "text_field_page": (context) => TextFieldPage(),
-//        "indicator_page": (context) => IndicatorPage(),
-//        "flex_page": (context) => FlexPage(),
-//        "wrap_flow_page": (context) => WrapFlowPage(),
-//        "align_page": (context) => AlignPage(),
-//        "container_page": (context) => ContainerLayout(),
-//        "scaffold_page": (context) => ScaffoldPage(),
-//        "scroll_page": (context) => ScrollPage(),
-//        "custom_scroll_page": (context) => CustomScrollViewPage(),
-//        "rich_text_edit": (context) => RichTextEditPage(),
-//        "custom_view_page": (context) => CustomViewPage(),
-//        "inherited_page": (context) => InheritedPage(),
-//        "provider_page": (context) => ProviderPage(),
-//        "future_builder_page": (context) => FutureBuilderPage(),
-//        "dialog_page": (context) => DialogPage(),
-//        "point_event_page": (context) => PointEventPage(),
-//        "gesture_detector_page": (context) => GestureDetectorPage(),
-//        "NotificationPage": (context) => NotificationPage(),
-//        "AnimationPage": (context) => AnimationPage(),
-//      },
+      routes: RouteMap.routes,
       home: MyHomePage(title: 'Flutter Demo Home Page'),
     );
   }
@@ -217,6 +189,10 @@ class _MyHomePageState extends State<MyHomePage> {
                 PageItemRoute(
                   routeName: "AnimationPage",
                   title: "Animation",
+                ),
+                PageItemRoute(
+                  routeName: "FileOperationPage",
+                  title: "File Operation",
                 ),
               ],
             ),

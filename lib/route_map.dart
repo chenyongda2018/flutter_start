@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 
+import 'chapter_11_io/file_operation_page.dart';
 import 'page/ContextRoutePage.dart';
 import 'package:flutter_start/chapter_8_event_notification/my_notification.dart';
 import 'package:flutter_start/chapter_9_animation/animation_page.dart';
@@ -34,34 +35,35 @@ import 'page/dialog_page.dart';
 import 'page/future_builder_page.dart';
 
 class RouteMap {
-  static Map<String, dynamic> routes = {
-    "stateless_widget":  StatelessWidgetPage(),
-    "context_route":  ContextRoutePage(),
-    "stateful_widget_route":  StatefulWidgetPage(),
-    "get_state_route":  GetStateInChildPage(),
-    "state_control_route":  StateManagementPage(),
-    "text_page":  TextPage(),
-    "button_page":  ButtonPage(),
-    "image_page":  ImagePage(),
-    "checkbox_page":  CheckBoxPage(),
-    "text_field_page":  TextFieldPage(),
-    "indicator_page":  IndicatorPage(),
-    "flex_page":  FlexPage(),
-    "wrap_flow_page":  WrapFlowPage(),
-    "align_page":  AlignPage(),
-    "container_page":  ContainerLayout(),
-    "scaffold_page":  ScaffoldPage(),
-    "scroll_page":  ScrollPage(),
-    "custom_scroll_page":  CustomScrollViewPage(),
-    "rich_text_edit":  RichTextEditPage(),
-    "custom_view_page":  CustomViewPage(),
-    "inherited_page":  InheritedPage(),
-    "provider_page":  ProviderPage(),
-    "future_builder_page":  FutureBuilderPage(),
-    "dialog_page":  DialogPage(),
-    "point_event_page":  PointEventPage(),
-    "gesture_detector_page":  GestureDetectorPage(),
-    "NotificationPage":  NotificationPage(),
-    "AnimationPage":  AnimationPage(),
+  static Map<String, WidgetBuilder> routes = {
+    "stateless_widget": (context) => StatelessWidgetPage(),
+    "context_route": (context) => ContextRoutePage(),
+    "stateful_widget_route": (context) => StatefulWidgetPage(),
+    "get_state_route": (context) => GetStateInChildPage(),
+    "state_control_route": (context) => StateManagementPage(),
+    "text_page": (context) => TextPage(),
+    "button_page": (context) => ButtonPage(),
+    "image_page": (context) => ImagePage(),
+    "checkbox_page": (context) => CheckBoxPage(),
+    "text_field_page": (context) => TextFieldPage(),
+    "indicator_page": (context) => IndicatorPage(),
+    "flex_page": (context) => FlexPage(),
+    "wrap_flow_page": (context) => WrapFlowPage(),
+    "align_page": (context) => AlignPage(),
+    "container_page": (context) => ContainerLayout(),
+    "scaffold_page": (context) => ScaffoldPage(),
+    "scroll_page": (context) => ScrollPage(),
+    "custom_scroll_page": (context) => CustomScrollViewPage(),
+    "rich_text_edit": (context) => RichTextEditPage(),
+    "custom_view_page": (context) => CustomViewPage(),
+    "inherited_page": (context) => InheritedPage(),
+    "provider_page": (context) => ProviderPage(),
+    "future_builder_page": (context) => FutureBuilderPage(),
+    "dialog_page": (context) => DialogPage(),
+    "point_event_page": (context) => PointEventPage(),
+    "gesture_detector_page": (context) => GestureDetectorPage(),
+    "NotificationPage": (context) => NotificationPage(),
+    "AnimationPage": (context) => AnimationPage(),
+    "FileOperationPage": (context) => FileOperationPage(),
   };
 }

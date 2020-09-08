@@ -13,21 +13,27 @@ class _NotificationPageState extends State<NotificationPage> {
       appBar: AppBar(
         title: Text("Notification"),
       ),
-      body: Center(
-        child: ListView.builder(
-            itemCount: 30,
-            itemExtent: 40,
-            itemBuilder: (BuildContext context, int index) {
-              return GestureDetector(
-                child: ListTile(
-                  title: Text("$index"),
-                ),
-                onTap: () {
-                  MyNotification(msg: "$index").dispatch(context);
-                },
-              );
-            }),
-      ),
+      body: NotificationListener<MyNotification> (
+        onNotification: (notification) {
+          print("detail page:${notification.msg}");
+          return false;
+        },
+        child: Center(
+          child: ListView.builder(
+              itemCount: 30,
+              itemExtent: 40,
+              itemBuilder: (BuildContext context, int index) {
+                return GestureDetector(
+                  child: ListTile(
+                    title: Text("$index"),
+                  ),
+                  onTap: () {
+                    MyNotification(msg: "$index").dispatch(context);
+                  },
+                );
+              }),
+        ),
+      )
     );
   }
 }

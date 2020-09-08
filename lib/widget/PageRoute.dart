@@ -1,5 +1,8 @@
 
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_start/chapter_9_animation/animation_page.dart';
+import 'package:flutter_start/route_map.dart';
 
 class PageItemRoute extends StatelessWidget {
 
@@ -28,7 +31,18 @@ class PageItemRoute extends StatelessWidget {
         ),
       ),
       onTap: () {
-        Navigator.pushNamed(context, routeName);
+        Navigator.push(context,PageRouteBuilder(
+          transitionDuration: Duration(milliseconds: 200),
+          pageBuilder: (BuildContext context, Animation animation,
+              Animation secondaryAnimation) {
+            return FadeTransition(
+              opacity: animation,
+              child: RouteMap.routes[routeName],
+            );
+          }
+        ));
+//        Navigator.pushNamed(context, routeName);
+
       },
     );
   }

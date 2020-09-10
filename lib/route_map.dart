@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 
 import 'chapter_11_io/file_operation_page.dart';
+import 'chapter_11_io/http_page.dart';
+import 'chapter_11_io/web_socket_page.dart';
 import 'page/ContextRoutePage.dart';
 import 'package:flutter_start/chapter_8_event_notification/my_notification.dart';
 import 'package:flutter_start/chapter_9_animation/animation_page.dart';
@@ -65,5 +67,7 @@ class RouteMap {
     "NotificationPage": (context) => NotificationPage(),
     "AnimationPage": (context) => AnimationPage(),
     "FileOperationPage": (context) => FileOperationPage(),
+    "HttpPage": (context) => HttpPage(),
+    "WebSocketPage": (context) => WebSocketPage(),
   };
 }

@@ -82,6 +82,14 @@ class _MyHomePageState extends State<MyHomePage> {
               mainAxisAlignment: MainAxisAlignment.start,
               children: <Widget>[
                 PageItemRoute(
+                  routeName: "WebSocketPage",
+                  title: "WebSocket",
+                ),
+                PageItemRoute(
+                  routeName: "HttpPage",
+                  title: "Dio package",
+                ),
+                PageItemRoute(
                   routeName: "rich_text_edit",
                   title: "Rich Text Edit",
                 ),

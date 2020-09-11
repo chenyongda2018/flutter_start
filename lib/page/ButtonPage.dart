@@ -1,6 +1,13 @@
 import 'package:flutter/material.dart';
 
-class ButtonPage extends StatelessWidget {
+class ButtonPage extends StatefulWidget {
+  @override
+  _ButtonPageState createState() => _ButtonPageState();
+}
+
+class _ButtonPageState extends State<ButtonPage> {
+  List<bool> isSelected = [true, false, false];
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -36,12 +43,27 @@ class ButtonPage extends StatelessWidget {
               highlightColor: Colors.blue[700],
               colorBrightness: Brightness.dark,
               splashColor: Colors.grey,
-
-              child: Text("Custom FlatButton",
+              child: Text(
+                "Custom FlatButton",
+              ),
+              shape: RoundedRectangleBorder(
+                  borderRadius: BorderRadius.all(Radius.circular(20))),
+              onPressed: () {},
+            ),
+            ToggleButtons(
+              children: <Widget>[
+                Row(
+                  children: <Widget>[Icon(Icons.ac_unit), Text("123")],
                 ),
-              shape: RoundedRectangleBorder(borderRadius: BorderRadius.all(Radius.circular(20))),
-              onPressed: (){},
-              
+                Icon(Icons.call),
+                Icon(Icons.cake),
+              ],
+              onPressed: (int index) {
+                setState(() {
+                  isSelected[index] = !isSelected[index];
+                });
+              },
+              isSelected: isSelected,
             ),
           ],
         ),

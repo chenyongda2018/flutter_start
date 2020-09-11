@@ -1,8 +1,8 @@
-
 import 'dart:io';
 
 import 'package:dio/dio.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_start/chapter_11_io/repo.dart';
 
 class HttpPage extends StatefulWidget {
   @override
@@ -14,25 +14,34 @@ class _HttpPageState extends State<HttpPage> {
 
   @override
   Widget build(BuildContext context) {
-
     return Scaffold(
-      appBar: AppBar(title: Text("Http Request"),),
+      appBar: AppBar(
+        title: Text("Http Request"),
+      ),
       body: Center(
         child: FutureBuilder(
-          future: _dio.get("https://api.github.com/orgs/flutterchina/repos"),
-          builder: (BuildContext context,AsyncSnapshot snapshot) {
-            if(snapshot.connectionState == ConnectionState.done) {
-              if(snapshot.hasError){
+          future: _dio.get("https://api.github.com/users/chenyongda2018/repos"),
+          builder: (BuildContext context, AsyncSnapshot snapshot) {
+            if (snapshot.connectionState == ConnectionState.done) {
+              if (snapshot.hasError) {
                 return Text("请求错误${snapshot.error.toString()}");
               }
+
+
               Response response = snapshot.data;
-              return ListView(
-                itemExtent: 40,
-                children: response.data.map<Widget>((e) {
+              List<Repo> repos = response.data.map<Repo>((item) {
+                print(item['full_name']);
+                return Repo.fromJson(item);
+              }).toList();
+
+              return ListView.builder(
+                itemExtent: 50,
+                itemCount: 30,
+                itemBuilder: (ctx, index) {
                   return ListTile(
-                    title: Text(e["full_name"]),
+                    title: Text(repos[index].name),
                   );
-                }).toList(),
+                },
               );
             } else {
               return CircularProgressIndicator();

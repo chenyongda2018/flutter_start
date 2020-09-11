@@ -3,7 +3,7 @@ import 'dart:io';
 
 import 'package:dio/dio.dart';
 
-void main() async {
+void main() {
 //  HttpClient client = HttpClient();
 //  HttpClientRequest request =
 //      await client.getUrl(Uri.parse("https://www.baidu.com"));
@@ -16,9 +16,12 @@ void main() async {
 //  print("response header:${response.headers}");
 //  print(result);
 
-
-  Dio dio = Dio();
-  Response response = await dio.get("https://api.github.com/users/octocat/orgs");
-  print(response.data.toString());
-
+//  Dio dio = Dio();
+//  Response response = await dio.get("https://api.github.com/users/octocat/orgs");
+//  print(response.data.toString());
+  String jsonStr = '[,{"name":"Rose"}]';
+  List items = json.decode(jsonStr);
+  items.map((e) {
+    print(e);
+  });
 }

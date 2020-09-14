@@ -34,7 +34,7 @@ class _RichTextEditPageState extends State<RichTextEditPage> {
               padding: EdgeInsets.all(16),
               controller: _controller,
               focusNode: _focusNode,
-              mode:ZefyrMode.edit,
+              mode: ZefyrMode.edit,
               imageDelegate: MyAppZefyrImageDelegate(),
             ),
           );
@@ -61,7 +61,7 @@ class _RichTextEditPageState extends State<RichTextEditPage> {
       final contents = await file.readAsString();
       return NotusDocument.fromJson(jsonDecode(contents));
     }
-    final Delta delta = Delta()..insert("Zefyr Quick Start\n");
+    final Delta delta = Delta()..insert("\n");
     return NotusDocument.fromDelta(delta);
   }
 
@@ -72,6 +72,7 @@ class _RichTextEditPageState extends State<RichTextEditPage> {
     print(contents);
     // For this example we save our document to a temporary file.
     final file = File(Directory.systemTemp.path + "/quick_start.json");
+    print(file.path);
     // And show a snack bar on success.
     file.writeAsString(contents).then((_) {
       Scaffold.of(context).showSnackBar(SnackBar(content: Text("Saved.")));

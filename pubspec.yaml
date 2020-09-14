@@ -28,7 +28,12 @@ dependencies:
   video_player: 0.10.11
   image_picker: 0.6.7
   webview_flutter: ^0.3.22+1
-  zefyr: ^0.11.0
+  zefyr:
+    git:
+      url: git://github.com/memspace/zefyr.git
+      path: packages/zefyr/
+      ref: master
+      commit: 9b032d8
   path_provider: ^1.6.14
   dio: ^3.0.10
   web_socket_channel: ^1.1.0

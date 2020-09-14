@@ -14,7 +14,7 @@ import 'package:flutter_start/page/ContextRoutePage.dart';
 import 'package:flutter_start/page/CustomScrollViewPage.dart';
 import 'package:flutter_start/page/FlexPage.dart';
 import 'package:flutter_start/page/ImagePageRoute.dart';
-import 'package:flutter_start/page/RichTextEditPage.dart';
+import 'package:flutter_start/page/rich_text_edit_page.dart';
 import 'package:flutter_start/page/ScaffordPage.dart';
 import 'package:flutter_start/page/ScrollPage.dart';
 import 'package:flutter_start/page/StatefulWidgetPage.dart';
@@ -35,6 +35,7 @@ import 'page/WrapFlowPage.dart';
 import 'page/custom_view_page.dart';
 import 'page/dialog_page.dart';
 import 'page/future_builder_page.dart';
+import 'page/slider_page.dart';
 
 class RouteMap {
   static Map<String, WidgetBuilder> routes = {
@@ -69,5 +70,6 @@ class RouteMap {
     "FileOperationPage": (context) => FileOperationPage(),
     "HttpPage": (context) => HttpPage(),
     "WebSocketPage": (context) => WebSocketPage(),
+    "SliderPage": (context) => SliderPage(),
   };
 }

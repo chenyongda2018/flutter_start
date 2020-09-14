@@ -9,7 +9,7 @@ import 'package:flutter_start/page/ContextRoutePage.dart';
 import 'package:flutter_start/page/CustomScrollViewPage.dart';
 import 'package:flutter_start/page/FlexPage.dart';
 import 'package:flutter_start/page/ImagePageRoute.dart';
-import 'package:flutter_start/page/RichTextEditPage.dart';
+import 'package:flutter_start/page/rich_text_edit_page.dart';
 import 'package:flutter_start/page/ScaffordPage.dart';
 import 'package:flutter_start/page/ScrollPage.dart';
 import 'package:flutter_start/page/StatefulWidgetPage.dart';
@@ -81,6 +81,10 @@ class _MyHomePageState extends State<MyHomePage> {
             child: Column(
               mainAxisAlignment: MainAxisAlignment.start,
               children: <Widget>[
+                PageItemRoute(
+                  routeName: "SliderPage",
+                  title: "Slider",
+                ),
                 PageItemRoute(
                   routeName: "WebSocketPage",
                   title: "WebSocket",

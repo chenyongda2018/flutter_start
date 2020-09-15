@@ -20,18 +20,6 @@ import 'package:flutter_start/page/provider_route_page.dart';
 import 'package:flutter_start/route_map.dart';
 import 'package:flutter_start/widget/PageRoute.dart';
 
-import 'chapter_8_event_notification/page/gesture_dectector_page.dart';
-import 'chapter_8_event_notification/page/notification_page.dart';
-import 'chapter_8_event_notification/page/point_event_page.dart';
-import 'page/GetStateInChildPage.dart';
-import 'page/IndicatorPage.dart';
-import 'page/StateManagementPage.dart';
-import 'page/TextFieldPage.dart';
-import 'page/WrapFlowPage.dart';
-import 'page/custom_view_page.dart';
-import 'page/dialog_page.dart';
-import 'page/future_builder_page.dart';
-
 void main() {
   runApp(MyApp());
 }

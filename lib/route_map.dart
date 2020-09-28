@@ -4,7 +4,6 @@ import 'chapter_11_io/file_operation_page.dart';
 import 'chapter_11_io/http_page.dart';
 import 'chapter_11_io/web_socket_page.dart';
 import 'page/ContextRoutePage.dart';
-import 'package:flutter_start/chapter_8_event_notification/my_notification.dart';
 import 'package:flutter_start/chapter_9_animation/animation_page.dart';
 import 'package:flutter_start/page/AlignPage.dart';
 import 'package:flutter_start/page/ButtonPage.dart';
@@ -22,7 +21,6 @@ import 'package:flutter_start/page/StatelessWidgetPage.dart';
 import 'package:flutter_start/page/TextPage.dart';
 import 'package:flutter_start/page/inherited_page.dart';
 import 'package:flutter_start/page/provider_route_page.dart';
-import 'package:flutter_start/widget/PageRoute.dart';
 
 import 'chapter_8_event_notification/page/gesture_dectector_page.dart';
 import 'chapter_8_event_notification/page/notification_page.dart';
@@ -36,6 +34,7 @@ import 'page/custom_view_page.dart';
 import 'page/dialog_page.dart';
 import 'page/future_builder_page.dart';
 import 'page/slider_page.dart';
+import 'state_management/catelog_page.dart';
 
 class RouteMap {
   static Map<String, WidgetBuilder> routes = {
@@ -71,5 +70,6 @@ class RouteMap {
     "HttpPage": (context) => HttpPage(),
     "WebSocketPage": (context) => WebSocketPage(),
     "SliderPage": (context) => SliderPage(),
+    "CatalogPage": (context) => CatalogPage(),
   };
 }

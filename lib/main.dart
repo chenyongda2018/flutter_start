@@ -50,11 +50,34 @@ class MyHomePage extends StatefulWidget {
   _MyHomePageState createState() => _MyHomePageState();
 }
 
-class _MyHomePageState extends State<MyHomePage> {
+class _MyHomePageState extends State<MyHomePage>
+    with SingleTickerProviderStateMixin {
+  List<String> _tabs = ["新闻", "漫画"];
+  TabController _tabController;
+
+  @override
+  void initState() {
+    super.initState();
+    _tabController = TabController(length: _tabs.length, vsync: this);
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
+        bottom: TabBar(
+          controller: _tabController,
+          tabs: _tabs
+              .map((e) => Container(
+                    padding:
+                        const EdgeInsets.symmetric(vertical: 8, horizontal: 6),
+                    child: Text(
+                      "$e",
+                      style: TextStyle(color: Colors.white, fontSize: 20),
+                    ),
+                  ))
+              .toList(),
+        ),
         title: Text(widget.title),
       ),
       body: Center(
@@ -69,6 +92,10 @@ class _MyHomePageState extends State<MyHomePage> {
             child: Column(
               mainAxisAlignment: MainAxisAlignment.start,
               children: <Widget>[
+                PageItemRoute(
+                  routeName: "CatalogPage",
+                  title: "ChangeNotifier",
+                ),
                 PageItemRoute(
                   routeName: "SliderPage",
                   title: "Slider",

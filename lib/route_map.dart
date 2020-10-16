@@ -34,6 +34,7 @@ import 'page/custom_view_page.dart';
 import 'page/data_table_page.dart';
 import 'page/dialog_page.dart';
 import 'page/future_builder_page.dart';
+import 'page/scan_anim_page.dart';
 import 'page/slider_page.dart';
 import 'state_management/catelog_page.dart';
 
@@ -73,5 +74,6 @@ class RouteMap {
     "SliderPage": (context) => SliderPage(),
     "CatalogPage": (context) => CatalogPage(),
     "DataTablePage": (context) => DataTablePage(),
+    "ScanAnimPage": (context) => ScanAnimPage(),
   };
 }

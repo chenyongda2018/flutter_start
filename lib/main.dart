@@ -93,6 +93,10 @@ class _MyHomePageState extends State<MyHomePage>
               mainAxisAlignment: MainAxisAlignment.start,
               children: <Widget>[
                 PageItemRoute(
+                  routeName: "ScanAnimPage",
+                  title: "Scan anim",
+                ),
+                PageItemRoute(
                   routeName: "DataTablePage",
                   title: "DataTable",
                 ),

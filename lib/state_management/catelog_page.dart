@@ -42,12 +42,6 @@ class _CatalogPageState extends State<CatalogPage> {
             },
           );
         }),
-//        floatingActionButton: FloatingActionButton(
-//          child: Icon(Icons.card_travel),
-//          onPressed: () {
-////            Navigator.pushNamed(context, routeName)
-//          },
-//        ),
       ),
     );
   }

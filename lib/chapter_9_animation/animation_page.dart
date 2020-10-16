@@ -17,7 +17,7 @@ class _AnimationPageState extends State<AnimationPage>
   void initState() {
     super.initState();
     _animController =
-        AnimationController(duration: Duration(milliseconds: 800), vsync: this);
+        AnimationController(duration: Duration(milliseconds: 800));
     _animation = CurvedAnimation(parent: _animController, curve: Curves.linear);
     _animation = Tween(begin: 280.0, end: 300.0).animate(_animation)
       ..addStatusListener((status) {
@@ -40,7 +40,6 @@ class _AnimationPageState extends State<AnimationPage>
         child: Column(
           mainAxisAlignment: MainAxisAlignment.spaceEvenly,
           children: <Widget>[
-
             //animation
             AnimatedBuilder(
               animation: _animation,
@@ -69,17 +68,18 @@ class _AnimationPageState extends State<AnimationPage>
                   ),
                 ),
                 onTap: () {
-                  Navigator.push(context, PageRouteBuilder(
-                    pageBuilder: (BuildContext context,Animation anim,Animation anims) {
-                      return FadeTransition(
-                        opacity: anim,
-                        child: Scaffold(
-                          appBar: AppBar(title: Text("Hero detail"),),
-                          body: HeroAnimationPage(),
+                  Navigator.push(context, PageRouteBuilder(pageBuilder:
+                      (BuildContext context, Animation anim, Animation anims) {
+                    return FadeTransition(
+                      opacity: anim,
+                      child: Scaffold(
+                        appBar: AppBar(
+                          title: Text("Hero detail"),
                         ),
-                      );
-                    }
-                  ));
+                        body: HeroAnimationPage(),
+                      ),
+                    );
+                  }));
 //                  Navigator.push(context,
 //                      CupertinoPageRoute(builder: (BuildContext context) {
 //                    return HeroAnimationPage();

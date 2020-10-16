@@ -93,6 +93,10 @@ class _MyHomePageState extends State<MyHomePage>
               mainAxisAlignment: MainAxisAlignment.start,
               children: <Widget>[
                 PageItemRoute(
+                  routeName: "DataTablePage",
+                  title: "DataTable",
+                ),
+                PageItemRoute(
                   routeName: "CatalogPage",
                   title: "ChangeNotifier",
                 ),

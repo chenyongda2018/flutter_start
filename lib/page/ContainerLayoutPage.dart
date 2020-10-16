@@ -47,7 +47,6 @@ class ContainerLayout extends StatelessWidget {
             decoration: BoxDecoration(
                 color: Colors.blue,
                 borderRadius: BorderRadius.circular(8),
-                gradient: LinearGradient(colors: [Colors.red, Colors.orange]),
                 boxShadow: [
                   BoxShadow(
                     offset: Offset(2.0, 2.0),

@@ -31,6 +31,7 @@ import 'page/StateManagementPage.dart';
 import 'page/TextFieldPage.dart';
 import 'page/WrapFlowPage.dart';
 import 'page/custom_view_page.dart';
+import 'page/data_table_page.dart';
 import 'page/dialog_page.dart';
 import 'page/future_builder_page.dart';
 import 'page/slider_page.dart';
@@ -71,5 +72,6 @@ class RouteMap {
     "WebSocketPage": (context) => WebSocketPage(),
     "SliderPage": (context) => SliderPage(),
     "CatalogPage": (context) => CatalogPage(),
+    "DataTablePage": (context) => DataTablePage(),
   };
 }

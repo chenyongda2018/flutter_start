@@ -23,8 +23,6 @@ class MyButton extends StatelessWidget {
         [theme.primaryColor, theme.primaryColorDark ?? theme.primaryColor];
 
     return DecoratedBox(
-      decoration: BoxDecoration(
-          borderRadius: radius, gradient: LinearGradient(colors: _colors)),
       child: Material(
         type: MaterialType.transparency,
         child: InkWell(
